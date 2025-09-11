@@ -8,8 +8,7 @@ const QuotesContext = createContext([]);
 export const QuoteIndex = ({ children }) => {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0)
   const [quotesWithLikes, setCurrentQuoteLike] = useState([...quotesArray])
-  const [likeIconFillColor, setLikeIconFillColor] = useState('#e2e8f0');
-  const [likeIconStrokeColor, setLikeIconStrokeColor] = useState('#334155');
+
 
   function handleNextQuote() {
     console.log('The button is clicked');
@@ -18,13 +17,6 @@ export const QuoteIndex = ({ children }) => {
     const newIndex = currentQuoteIndex < quotesArray.length - 1 ? currentQuoteIndex + 1 : currentQuoteIndex;
     setCurrentQuoteIndex(newIndex);
 
-    if (quotesWithLikes[newIndex].likeCount > 0) {
-      setLikeIconFillColor('red');
-      setLikeIconStrokeColor('red');
-    } else {
-      setLikeIconFillColor('#e2e8f0');
-      setLikeIconStrokeColor('#334155');
-    }
   }
 
   function handlePreviousQuote() {
@@ -34,19 +26,9 @@ export const QuoteIndex = ({ children }) => {
     const newIndex = currentQuoteIndex > 0 ? currentQuoteIndex - 1 : currentQuoteIndex;
     setCurrentQuoteIndex(newIndex);
 
-    if (quotesWithLikes[newIndex].likeCount > 0) {
-      setLikeIconFillColor('red');
-      setLikeIconStrokeColor('red');
-    } else {
-      setLikeIconFillColor('#e2e8f0');
-      setLikeIconStrokeColor('#334155');
-    }
   }
 
   function handleLike() {
-
-    setLikeIconFillColor('red')
-    setLikeIconStrokeColor('red')
 
     console.log('Quote:', `"${quotesWithLikes[currentQuoteIndex].quote}"`, 'is liked');
 
@@ -66,12 +48,9 @@ export const QuoteIndex = ({ children }) => {
   const value = {
     currentQuoteIndex,
     quotesWithLikes,
-    likeIconFillColor,
-    likeIconStrokeColor,
     handleNextQuote,
     handlePreviousQuote,
     handleLike,
-    quotesArray
   };
 
   return (
