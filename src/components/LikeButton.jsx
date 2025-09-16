@@ -11,7 +11,7 @@ export default function LikeButton({ onClick, children }) {
       };
     }
     return {
-      fill: "#e2e8f0",
+      fill: "#FFF",
       stroke: "#334155",
     };
   };
