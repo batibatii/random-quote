@@ -14,7 +14,7 @@ export const QuoteIndex = ({ children }) => {
     console.log('The button is clicked');
     console.log('The next quote is:', quotesArray[currentQuoteIndex].quote);
 
-    const newIndex = currentQuoteIndex < quotesArray.length - 1 ? currentQuoteIndex + 1 : currentQuoteIndex;
+    const newIndex = currentQuoteIndex < quotesArray.length - 1 ? currentQuoteIndex + 1 : 0;
     setCurrentQuoteIndex(newIndex);
 
   }
