@@ -18,7 +18,7 @@ export function Title({ label, align }) {
     }
   };
   return (
-    <h2 className={`font-bold dark:text-accent text-xl ${alignText()}`}>
+    <h2 className={`font-bold dark:text-primary text-xl ${alignText()}`}>
       {label}
     </h2>
   );

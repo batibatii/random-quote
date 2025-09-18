@@ -20,16 +20,16 @@ export default function Home() {
     <main className='min-h-dvh flex items-center justify-center bg-background'>
       <Card>
         <Title label={quotesWithLikes[currentQuoteIndex].quote} align={align.center} />
-        <span className='text-end block dark:text-muted-foreground'>
+        <span className='text-end dark:text-primary block '>
           {quotesWithLikes[currentQuoteIndex].author}
         </span>
-        <div className='flex gap-5 mt-8'>
-          <Button onClick={handlePreviousQuote} className={`bg-secondary hover:bg-secondary/80 p-2 shadow-lg hover:shadow-xl active:shadow-sm active:scale-95 active:translate-y-0.5 transition-all duration-75`}>
+        <div className='flex gap-5 mt-8 ml-3 md:ml-0'>
+          <Button onClick={handlePreviousQuote} className={`bg-secondary dark:bg-primary dark:text-primary-foreground  hover:bg-secondary/80 shadow-lg hover:shadow-xl active:shadow-sm active:scale-95 active:translate-y-0.5 transition-all duration-75`}>
             Previous Quote
           </Button>
 
           <Button onClick={handleNextQuote}
-            className={`bg-secondary hover:bg-secondary/80 active:bg-secondary/60 p-2 shadow-lg hover:shadow-xl active:shadow-sm active:scale-95 active:translate-y-0.5 transition-all duration-75`}>
+            className={`bg-secondary dark:bg-primary dark:text-primary-foreground   hover:bg-secondary/80 active:bg-secondary/60  shadow-lg hover:shadow-xl active:shadow-sm active:scale-95 active:translate-y-0.5 transition-all duration-75`}>
             Next Quote
           </Button>
 
