@@ -11,7 +11,7 @@ export function Login() {
             Email
           </Label>
           <Input
-            className="dark:placeholder:text-slate-500"
+            className="dark:placeholder:t ext-slate-500"
             type="email"
             id="email"
             placeholder="Email"
@@ -30,7 +30,9 @@ export function Login() {
           ></Input>
           <div className="absolute bottom-0 left-1 h-[2px] w-0 bg-ring transition-all duration-300 ease-in-out group-focus-within:w-[98%]"></div>
         </div>
-        <Button className={`active:scale-95 active:translate-y-0.5 `}>
+        <Button
+          className={`active:scale-95 active:translate-y-0.5 text-primary-foreground `}
+        >
           Login / Sign Up
         </Button>
       </div>
