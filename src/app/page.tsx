@@ -1,10 +1,10 @@
 'use client';
 
-import Card from '../components/Card.jsx'
-import { Title, align } from '../components/Title.jsx';
+import Card from '../components/Card'
+import { Title, align } from '../components/Title';
 import LikeButton from '@/components/LikeButton';
-import { useQuotes } from './QuotesContext.js';
-import { Button } from '@/components/ui/button.jsx';
+import { useQuotes } from './QuotesContext';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const {

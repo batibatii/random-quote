@@ -4,7 +4,12 @@ export const align = {
   right: "right",
 };
 
-export function Title({ label, align }) {
+interface TitleProps {
+  label: string,
+  align:string
+}
+
+export function Title({ label, align }: TitleProps) {
   const alignText = () => {
     switch (align) {
       case "center":

@@ -1,3 +1,9 @@
+export interface Quote {
+  quote: string;
+  author: string;
+  likeCount: number
+}
+
 export const quotes = [
   {
     quote: "Be yourself; everyone else is already taken.",
