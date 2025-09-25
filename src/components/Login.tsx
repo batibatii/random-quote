@@ -11,7 +11,6 @@ export function Login() {
             Email
           </Label>
           <Input
-            className="dark:placeholder:t ext-slate-500"
             type="email"
             id="email"
             placeholder="Email"
@@ -23,7 +22,6 @@ export function Login() {
             Password
           </Label>
           <Input
-            className="dark:placeholder:text-slate-500"
             type="password"
             id="password"
             placeholder="Password"

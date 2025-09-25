@@ -2,10 +2,20 @@
 
 import { createContext, useState, useContext } from 'react';
 import { quotes as quotesArray } from '../../quotes';
+import { Quote } from '../../quotes';
+import { ChildrenProps } from '@/types/generic';
 
-const QuotesContext = createContext([]);
+const QuotesContext = createContext<{
+  currentQuoteIndex: number;
+  quotesWithLikes: Quote[];
+  handleNextQuote: () => void;
+  handlePreviousQuote: () => void;
+  handleLike: () => void
+} | undefined>(undefined);
 
-export const QuoteIndex = ({ children }) => {
+
+
+export const QuoteIndex = ({ children}: ChildrenProps ) => {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0)
   const [quotesWithLikes, setCurrentQuoteLike] = useState([...quotesArray])
 
@@ -60,7 +70,10 @@ export const QuoteIndex = ({ children }) => {
   );
 };
 
-export const useQuotes = () => {
-  const context = useContext(QuotesContext);
-  return context;
-};
+  export const useQuotes = () => {
+    const context = useContext(QuotesContext);
+    if (!context) {
+      throw new Error('useQuotes must be used within a QuoteIndex provider');
+    }
+    return context;
+  };

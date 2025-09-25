@@ -1,10 +1,10 @@
 'use client';
 
-import Card from '../components/Card.jsx'
-import { Title, align } from '../components/Title.jsx';
+import Card from '../components/Card'
+import { Title, TextAlign } from '../components/Title';
 import LikeButton from '@/components/LikeButton';
-import { useQuotes } from './QuotesContext.js';
-import { Button } from '@/components/ui/button.jsx';
+import { useQuotes } from './QuotesContext';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const {
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className='min-h-dvh flex items-center justify-center bg-background'>
       <Card>
-        <Title label={quotesWithLikes[currentQuoteIndex].quote} align={align.center} />
+        <Title label={quotesWithLikes[currentQuoteIndex].quote} align={TextAlign.CENTER} />
         <span className='text-end dark:text-primary block '>
           {quotesWithLikes[currentQuoteIndex].author}
         </span>

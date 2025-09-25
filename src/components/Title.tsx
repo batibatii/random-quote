@@ -1,17 +1,22 @@
-export const align = {
-  center: "center",
-  left: "left",
-  right: "right",
+export enum TextAlign  {
+  CENTER = "center",
+  LEFT = "left",
+  RIGHT = "right",
 };
 
-export function Title({ label, align }) {
+interface TitleProps {
+  label: string,
+  align: TextAlign
+}
+
+export function Title({ label, align }: TitleProps) {
   const alignText = () => {
     switch (align) {
-      case "center":
+      case TextAlign.CENTER:
         return "text-center";
-      case "left":
+      case TextAlign.LEFT:
         return "text-start";
-      case "right":
+      case TextAlign.RIGHT:
         return "text-end";
       default:
         console.error("No suitable setting is found for", align);

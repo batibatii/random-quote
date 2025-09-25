@@ -1,9 +1,15 @@
 import { useQuotes } from "@/app/QuotesContext";
+import {Quote} from '../../quotes';
 
-export default function LikeButton({ onClick, children }) {
+interface LikeButtonProps {
+  onClick: () => void;
+  children?: React.ReactNode
+}
+
+export default function LikeButton({ onClick, children }: LikeButtonProps) {
   const { quotesWithLikes, currentQuoteIndex } = useQuotes();
 
-  const getLikeButtonColors = (likeCount) => {
+  const getLikeButtonColors = (likeCount: number) => {
     if (likeCount > 0) {
       return {
         fill: "red",
