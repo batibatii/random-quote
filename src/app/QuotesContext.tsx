@@ -2,7 +2,7 @@
 
 import { createContext, useState, useContext } from 'react';
 import { quotes as quotesArray } from '../../quotes';
-import {Quote} from '../../quotes';
+import { Quote } from '../../quotes';
 import { ChildrenProps } from '@/types/generic';
 
 const QuotesContext = createContext<{
